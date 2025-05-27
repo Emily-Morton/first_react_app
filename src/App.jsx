@@ -6,7 +6,6 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 import FirstComponent from './FirstComponent.jsx';
-import FirstComponent from './FirstComponent.jsx';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -20,7 +19,7 @@ function App() {
       <p>Hello World</p>
     </>
     );
-    );
+    
 }
 
 export default App
