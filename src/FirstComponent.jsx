@@ -1,14 +1,7 @@
-let highlight = true;
 
-export default function FirstComponent() {
-  let styles = {};
-  if (highlight){
-   styles = {
-    color: "red",
-    backgroundColor: "green"
-    }
-  };
-  return (
-    <div styles={{styles}}>My First Component</div>
-  )
+
+export default function FirstComponent({
+  name= "DAVE", 
+}) {
+  return <div>hi {name}</div>
 }
