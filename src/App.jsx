@@ -7,6 +7,8 @@
 import "./App.css";
 import FirstComponent from "./FirstComponent.jsx";
 import SecondComponent from "./SecondComponent.jsx";
+import ProductSurround from "./ProductSurround.jsx";
+import SubComponent from "./SubComponent.jsx";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -16,13 +18,20 @@ function App() {
   return (
     <>
       <div>
+      <ProductSurround>
         <h1>My App</h1>
-        <FirstComponent name="everyone"/>
+      </ProductSurround>
+        <FirstComponent text="hello" showAsHeading/>
         <p>Hello World</p>
       </div>
       <div>
         <SecondComponent firstName={"Pika"} age={10} />
       </div>
+    <SubComponent 
+    left={<i class="fa-solid fa-star"></i>} text=" Emily " right={<i class="fa-solid fa-star"></i>} >
+
+    </SubComponent>
+
     </>
   );
 }

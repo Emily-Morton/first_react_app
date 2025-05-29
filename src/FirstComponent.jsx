@@ -1,7 +1,17 @@
 
 
 export default function FirstComponent({
-  name= "DAVE", 
+  showAsHeading = false,
+  text = ""
 }) {
-  return <div>hi {name}</div>
+  let node = null
+
+  if (showAsHeading) {
+     node =  <h1>{text}</h1>
+  } else {
+    node =  <p>{text}</p>
+  };
+  
+  return <div>{node}</div>
+
 }

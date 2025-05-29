@@ -2,7 +2,7 @@
 
 export default function SecondComponent({
   firstName = "mate",
-  age = 10
+  age = 1
   }) {
   return (
   <>
