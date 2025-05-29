@@ -1,7 +1,8 @@
 import {useState} from "react"
 
 export {
-  CounterComponent
+  CounterComponent,
+  AddX
 }
 
 function CounterComponent() {
@@ -16,4 +17,13 @@ function CounterComponent() {
       <button onClick={() => setCount(count -1)}>Click Me -</button>
     </>
   );
+}
+
+function AddX(){
+  let [text, setText] = useState("x")
+
+  return (<>
+  <p>{text}</p>
+  <button onClick={() => setText(text + "x")}>Add X</button>
+  </>)
 }

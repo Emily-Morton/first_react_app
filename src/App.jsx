@@ -11,7 +11,7 @@ import ProductSurround from "./ProductSurround.jsx";
 import SubComponent from "./SubComponent.jsx";
 import ListComponent from "./ListComponent.jsx";
 import {OnClickHandler, OnHoverHandler} from "./Handlers.jsx";
-import {CounterComponent} from "./MainComponent.jsx";
+import {CounterComponent, AddX} from "./MainComponent.jsx";
 
 function App() {
 
@@ -36,6 +36,7 @@ function App() {
     <OnHoverHandler></OnHoverHandler>
 
     <CounterComponent></CounterComponent>
+    <AddX></AddX>
   </>
   );
 }
