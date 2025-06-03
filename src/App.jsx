@@ -7,6 +7,7 @@ import ListComponent from "./ListComponent.jsx";
 import {OnClickHandler, OnHoverHandler} from "./Handlers.jsx";
 import {CounterComponent, AddX} from "./MainComponent.jsx";
 import Counter  from "./Counter.jsx";
+import {OneComponent, TwoComponent}  from "./Basics.jsx";
 
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
     <AddX></AddX>
 
     <Counter />
+
+    <OneComponent />
+    <TwoComponent />
 
   </>
   );
