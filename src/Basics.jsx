@@ -1,39 +1,56 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export {
   OneComponent,
   TwoComponent
 }
 
-const initialCar = {
-  _id: 1, 
-  name: "Ferrari",
-  bhp: 123
-}
-const carToAdd = {
-  _id: 2, 
-  name: "Bugatti",
-  bhp: 123
-}
+// const initialCar = {
+//   _id: 1,
+//   name: "Ferrari",
+//   bhp: 123
+// }
+// const carToAdd = {
+//   _id: 2,
+//   name: "Bugatti",
+//   bhp: 123
+// }
 
 function OneComponent(){
-  const [cars, setCars] = useState([initialCar])
+  const [cars, setCars] = useState([]);
+  
 
-    const removeCar = (id) => {
-    const idx = cars.findIndex((item) => item._id === id);
-    setCars([...cars.slice(0, idx), ...cars.slice(idx + 1)]);
-  };
+  // const removeCar = (id) => {
+  //   const idx = cars.findIndex((item) => item._id === id);
+  //   setCars([...cars.slice(0, idx), ...cars.slice(idx + 1)]);
+  // };
+
+  const getData = useCallback( async () => {
+    try {
+      const resp = await fetch('https://carsapp-production.up.railway.app/api/v1/cars');
+      const data = await resp.json();
+      setCars(data);
+    } catch (err) {
+      console.log('error', err);
+    }
+  }, [setCars])
+
+  useEffect(() => {
+    getData();
+  },[cars, getData]);
+
+
+  if (!cars.length) return <p>you have no cars</p>
 
   return (
-      <div>
+    <div>
       <ul>
         {cars.map(({ name, bhp, _id }) => (
           <li key={_id}>
-            {name} ({bhp}) <button onClick={() => removeCar(_id)}>X</button>
+            {name} ({bhp})
           </li>
         ))}
       </ul>
-      <button onClick={() => setCars([...cars, carToAdd])}>Add Bugatti</button>
     </div>
   )
 
