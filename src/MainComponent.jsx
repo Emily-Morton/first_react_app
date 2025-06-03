@@ -13,8 +13,8 @@ function CounterComponent() {
   return (
     <>
       <p>{count}</p>
-      <button onClick={() => setCount(count +1)}>Click Me +</button>
-      <button onClick={() => setCount(count -1)}>Click Me -</button>
+      <button onClick={() => setCount(count +1)}>ADD +1</button>
+      <button onClick={() => setCount(count -1)}>SUBTRACT -1</button>
     </>
   );
 }
