@@ -12,6 +12,8 @@ import SubComponent from "./SubComponent.jsx";
 import ListComponent from "./ListComponent.jsx";
 import {OnClickHandler, OnHoverHandler} from "./Handlers.jsx";
 import {CounterComponent, AddX} from "./MainComponent.jsx";
+import Counter  from "./Counter.jsx";
+
 
 function App() {
 
@@ -37,6 +39,9 @@ function App() {
 
     <CounterComponent></CounterComponent>
     <AddX></AddX>
+
+    <Counter />
+
   </>
   );
 }

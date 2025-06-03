@@ -5,7 +5,6 @@ export {
 
 function OnClickHandler({g = "hello"}) {
 
-
   const handler = (greeting="") => console.log(greeting);
 
   return <button onClick={() => handler(g)}>Click Me</button>
@@ -15,12 +14,16 @@ function OnClickHandler({g = "hello"}) {
 function OnHoverHandler() {
 
   function changeBackground(e) {
-    e.target.style.background = 'red';
+    e.target.style.background = '#747bff';
   }
+  function removeBackground(e) {
+    e.target.style.background = '';
+  }
+
 
   return (
     <div className="App">
-      <button onMouseOver={changeBackground}>Hover over me!</button>
+      <button onMouseEnter={changeBackground} onMouseLeave={removeBackground}>Hover over me!</button>
     </div>
   );
 }
