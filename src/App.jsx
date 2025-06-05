@@ -27,7 +27,7 @@ function App() {
     left={<i className="fa-solid fa-star"></i>} text=" Emily " right={<i className="fa-solid fa-star"></i>} >
     </SubComponent>
 
-    <ListComponent data={[{name: "emily", age:36}, {name:"curt", age:35}, {name: "hoku", age:10}, {name: "pika", age:10}]}></ListComponent>
+    <ListComponent data={[{name: "emily", age:36}, {name:"curt", age:35}, {name: "hoku", age:10}, {name: "pika", age:10}, {name: "digit", age:7}, {name: "remy", age:4}]}></ListComponent>
 
     <OnClickHandler></OnClickHandler>
     <OnHoverHandler></OnHoverHandler>
